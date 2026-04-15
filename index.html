@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad M2 L6 - jQuery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; padding: 40px; font-family: Arial, sans-serif; }
+    h1 { color: #2E75B6; margin-bottom: 30px; }
+    h2 { color: #1F3864; margin-top: 40px; margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
+    #miLista li { font-size: 1.1rem; margin-bottom: 6px; }
+    .botones { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Actividad M2 L6 — jQuery</h1>
+
+    <!-- 3. Manipulación del DOM -->
+    <h2>3. Manipulación del DOM</h2>
+    <ul id="miLista">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ul>
+
+    <!-- 4. Eventos en jQuery -->
+    <h2>4. Eventos en jQuery</h2>
+    <div class="botones">
+      <button id="btnOcultar" class="btn btn-primary">Ocultar lista</button>
+      <button id="btnColores" class="btn btn-warning">Cambiar colores</button>
+    </div>
+
+    <!-- 5. Plugin Bootstrap: Modal -->
+    <h2>5. Plugin Bootstrap — Modal</h2>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#miModal">
+      Abrir Modal
+    </button>
+
+    <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="miModalLabel">Plugin Modal de Bootstrap</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            Este es un modal de Bootstrap activado con
+            <code>data-bs-toggle="modal"</code>
+            y controlado también con jQuery.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="btnModal">Acción con jQuery</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS: jQuery primero, luego Bootstrap, luego tu archivo -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/javascript.js"></script>
+
+</body>
+</html>
